@@ -1,35 +1,32 @@
 //
-//  ViewController.swift
-//  JVBlockTest
+//  scene2ViewController.swift
+//  JVNavigationControlScene
 //
-//  Created by Jarvan on 2017/3/24.
+//  Created by Jarvan on 2017/3/27.
 //  Copyright © 2017年 Jarvan. All rights reserved.
 //
 
 import UIKit
 
-class twoViewController: UIViewController {
+class scene2ViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     
-    var testOneblock:((_ a:String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title="不使用weak Scene"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     @IBAction func pushClick(_ sender: UIButton) {
-        //获取storyboard: 通过bundle根据storyboard的名字来获取我们的storyboard,
+        //获取storyboard中的 ViewController
         let story = UIStoryboard.init(name: "Main", bundle: nil)
-        //由storyboard根据myView的storyBoardID来获取我们要切换的视图
-        let nextVC = story.instantiateViewController(withIdentifier: "nextViewController") as! nextViewController
+       let nextVC = story.instantiateViewController(withIdentifier: "nextViewController") as! nextViewController
         
         nextVC.testBlock={(param:String) in
             self.doSomething(str: param)
@@ -37,9 +34,6 @@ class twoViewController: UIViewController {
         
         self.navigationController?.pushViewController(nextVC, animated: true)
         
-//        self.testOneblock={(a:String) in
-//            self.textLabel.text=a;
-//        }
     }
     
     @IBAction func popClick(_ sender: UIButton) {
@@ -53,7 +47,7 @@ class twoViewController: UIViewController {
     
     
     deinit {
-        print("oneViewController deinit")
+        print("scene2ViewController deinit")
     }
-}
 
+}

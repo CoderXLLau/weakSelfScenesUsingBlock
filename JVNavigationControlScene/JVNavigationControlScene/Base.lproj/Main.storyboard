@@ -23,12 +23,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi9-Lq-ZFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1420" y="204"/>
+            <point key="canvasLocation" x="-1388" y="81"/>
         </scene>
-        <!--One View Controller-->
+        <!--Home-->
         <scene sceneID="h07-Og-DMt">
             <objects>
-                <viewController id="nEv-0i-WEq" customClass="oneViewController" customModule="JVBlockTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nEv-0i-WEq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qhW-al-29G"/>
                         <viewControllerLayoutGuide type="bottom" id="1MI-zQ-QN0"/>
@@ -38,29 +38,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rS-WN-tlk">
-                                <rect key="frame" x="139" y="318.5" width="96" height="30"/>
-                                <state key="normal" title="pushToTwoVC"/>
+                                <rect key="frame" x="157" y="318.5" width="60" height="30"/>
+                                <state key="normal" title="pushVC1"/>
                                 <connections>
                                     <segue destination="ieU-aZ-WhE" kind="push" id="hP2-iq-4so"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiI-MD-vjS">
+                                <rect key="frame" x="156" y="388.5" width="62" height="30"/>
+                                <state key="normal" title="pushVC2"/>
+                                <connections>
+                                    <segue destination="Bqe-ei-IwG" kind="push" id="V0E-9R-wRw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8rS-WN-tlk" firstAttribute="centerX" secondItem="00B-R7-KD7" secondAttribute="centerX" id="CCv-Ae-eR6"/>
+                            <constraint firstItem="OiI-MD-vjS" firstAttribute="centerY" secondItem="00B-R7-KD7" secondAttribute="centerY" constant="70" id="ECb-vF-VmF"/>
                             <constraint firstItem="8rS-WN-tlk" firstAttribute="centerY" secondItem="00B-R7-KD7" secondAttribute="centerY" id="EZr-OE-gyp"/>
+                            <constraint firstItem="OiI-MD-vjS" firstAttribute="centerX" secondItem="00B-R7-KD7" secondAttribute="centerX" id="Kkf-mL-NT0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GqC-kU-2Cg"/>
+                    <navigationItem key="navigationItem" title="Home" id="GqC-kU-2Cg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e89-Z7-9CT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-598" y="204"/>
+            <point key="canvasLocation" x="-650" y="81"/>
         </scene>
-        <!--Two View Controller-->
+        <!--使用weak Scene-->
         <scene sceneID="tIg-rV-huv">
             <objects>
-                <viewController id="ieU-aZ-WhE" customClass="twoViewController" customModule="JVBlockTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="使用weak Scene" id="ieU-aZ-WhE" customClass="scene1ViewController" customModule="JVNavigationControlScene" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oDA-I0-hdh"/>
                         <viewControllerLayoutGuide type="bottom" id="NPS-ZH-N25"/>
@@ -102,19 +111,19 @@
                             <constraint firstItem="EdB-OI-5me" firstAttribute="trailing" secondItem="KCK-PA-hjq" secondAttribute="trailing" id="x7G-Fj-o5h"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xgg-qP-Rec"/>
+                    <navigationItem key="navigationItem" title="使用weak Scene" id="xgg-qP-Rec"/>
                     <connections>
                         <outlet property="textLabel" destination="feI-az-io8" id="6fV-61-KWp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1i-eQ-Dq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="204"/>
+            <point key="canvasLocation" x="132" y="-731"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="Of8-xu-RBE">
             <objects>
-                <viewController storyboardIdentifier="nextViewController" id="OqC-ff-dcf" customClass="nextViewController" customModule="JVBlockTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nextViewController" id="OqC-ff-dcf" customClass="nextViewController" customModule="JVNavigationControlScene" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nzb-U0-7kT"/>
                         <viewControllerLayoutGuide type="bottom" id="U3E-Pn-QqN"/>
@@ -142,6 +151,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8P8-iH-Crw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063" y="204"/>
+        </scene>
+        <!--使用weak Scene-->
+        <scene sceneID="ouM-9u-9Rx">
+            <objects>
+                <viewController title="使用weak Scene" id="Bqe-ei-IwG" customClass="scene2ViewController" customModule="JVNavigationControlScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rj7-aJ-V8i"/>
+                        <viewControllerLayoutGuide type="bottom" id="bLe-wO-8bd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G5c-57-GpI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEc-sV-3Zj">
+                                <rect key="frame" x="166" y="339" width="42" height="30"/>
+                                <state key="normal" title="push"/>
+                                <connections>
+                                    <action selector="pushClick:" destination="Bqe-ei-IwG" eventType="touchUpInside" id="u3V-SO-79B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwK-gX-adN">
+                                <rect key="frame" x="166" y="389" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F3-Yw-gCk">
+                                <rect key="frame" x="166" y="430" width="42" height="30"/>
+                                <state key="normal" title="pop"/>
+                                <connections>
+                                    <action selector="popClick:" destination="Bqe-ei-IwG" eventType="touchUpInside" id="ryj-rp-yPj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YwK-gX-adN" firstAttribute="trailing" secondItem="qEc-sV-3Zj" secondAttribute="trailing" id="2z6-ty-bQ9"/>
+                            <constraint firstItem="6F3-Yw-gCk" firstAttribute="trailing" secondItem="qEc-sV-3Zj" secondAttribute="trailing" id="Cnc-zx-vIL"/>
+                            <constraint firstItem="6F3-Yw-gCk" firstAttribute="leading" secondItem="qEc-sV-3Zj" secondAttribute="leading" id="GRZ-Uh-lNV"/>
+                            <constraint firstItem="qEc-sV-3Zj" firstAttribute="centerX" secondItem="G5c-57-GpI" secondAttribute="centerX" id="Pv7-2H-fM6"/>
+                            <constraint firstItem="qEc-sV-3Zj" firstAttribute="centerY" secondItem="G5c-57-GpI" secondAttribute="centerY" constant="20" id="i7m-PE-EGH"/>
+                            <constraint firstItem="YwK-gX-adN" firstAttribute="top" secondItem="qEc-sV-3Zj" secondAttribute="bottom" constant="20" id="iLc-4q-yQ5"/>
+                            <constraint firstItem="6F3-Yw-gCk" firstAttribute="top" secondItem="YwK-gX-adN" secondAttribute="bottom" constant="20" id="o3Q-48-oo1"/>
+                            <constraint firstItem="YwK-gX-adN" firstAttribute="leading" secondItem="qEc-sV-3Zj" secondAttribute="leading" id="wth-Cw-jCP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="不使用weak Scene" id="RuB-BP-3KC"/>
+                    <connections>
+                        <outlet property="textLabel" destination="YwK-gX-adN" id="aJm-eg-gKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3Z-xt-y9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="197"/>
         </scene>
     </scenes>
 </document>

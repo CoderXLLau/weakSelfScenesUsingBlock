@@ -15,6 +15,7 @@ class nextViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="第三个控制器"
     }
 
     override func didReceiveMemoryWarning() {
