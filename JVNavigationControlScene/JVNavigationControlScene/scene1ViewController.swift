@@ -26,13 +26,14 @@ class scene1ViewController: UIViewController {
     
     @IBAction func pushClick(_ sender: UIButton) {
         //获取storyboard中的 ViewController
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        nextVC = story.instantiateViewController(withIdentifier: "nextViewController") as? nextViewController
-        
-        nextVC?.testBlock={[weak self] (param:String) in
-            self?.doSomething(str: param)
+        if nextVC == nil {
+            let story = UIStoryboard.init(name: "Main", bundle: nil)
+            nextVC = story.instantiateViewController(withIdentifier: "nextViewController") as? nextViewController
+            
+            nextVC?.testBlock={[weak self] (param:String) in
+                self?.doSomething(str: param)
+            }
         }
-        
         self.navigationController?.pushViewController(nextVC!, animated: true)
     }
     
